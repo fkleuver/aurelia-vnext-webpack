@@ -25,12 +25,12 @@ export class App {
   public readonly svg: SVGSVGElement;
   public readonly rootNode: Pythagoras;
 
-  bind() {
+  bound() {
     // this.rootNode.update(this.getRootProps());
-    this.updateRoot();
   }
 
   attached() {
+    this.updateRoot();
     this.next();
     d3select(this.svg).on('mousemove', this.onMousemove);
   }

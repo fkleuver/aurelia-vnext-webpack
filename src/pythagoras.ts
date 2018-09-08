@@ -94,6 +94,7 @@ export class Pythagoras implements IPythagorasProps {
   constructor(
     readonly element: SVGGElement,
   ) {
+    this.element['au'] = this;
     // this.update = throttle(this.update, 12);
     this.gTransform = element.getAttributeNode('transform');
   }

@@ -1,0 +1,29 @@
+<template>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .control {
+      float: left;
+      vertical-align: top;
+      width: 150px;
+      height: 50px;
+    }
+    svg {
+      pointer-events: none;
+    }
+  </style>
+  <div style='height: 50px;' css='max-width: ${width}px;'>
+  </div>
+  <svg
+    style='width: 100%; height: calc(100% - 50px); border: 1px solid grey;'
+    ref='svg'
+    mousedown.delegate='onMouseMove($event.clientX, $event.clientY)'>
+    <g as-element='pythagoras'
+      view-model.ref='rootNode'
+      transform=''></g>
+  </svg>
+</template>
